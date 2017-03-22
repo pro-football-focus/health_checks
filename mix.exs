@@ -3,7 +3,7 @@ defmodule HealthChecks.Mixfile do
 
   def project do
     [app: :health_checks,
-     version: "0.1.1",
+     version: "0.1.2",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -28,6 +28,9 @@ defmodule HealthChecks.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:ecto, optional: true},
+      {:redix, optional: true}
+    ]
   end
 end
