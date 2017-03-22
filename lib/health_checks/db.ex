@@ -1,6 +1,6 @@
 if Code.ensure_loaded?(Ecto) do
 
-  defmodule Molly.HealthChecks.DB do
+  defmodule HealthChecks.DB do
 
     @doc """
     Receives a Repo and sends a generic SELECT statement to check availability.

@@ -1,6 +1,6 @@
 if Code.ensure_loaded?(Redix) do
 
-  defmodule Molly.HealthChecks.Redis do
+  defmodule HealthChecks.Redis do
 
     @doc """
     Receives a Redis connection and sends a "PING" to check availablity.
