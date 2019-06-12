@@ -8,7 +8,7 @@ if Code.ensure_loaded?(Ecto) do
     """
     def check(repo) do
       try do
-        Ecto.Adapters.SQL.query(repo, "select 1", [])
+        Ecto.Adapters.SQL.query(repo, "select 1", [], [log: false])
         :ok
       catch
         :exit, _ -> :error
