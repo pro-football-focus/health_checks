@@ -28,6 +28,9 @@ defmodule HealthChecks.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:ecto_sql, "> 3.0.0", optional: true},
+      {:redix, ">= 0.0.0", optional: true},
+    ]
   end
 end
